@@ -10,5 +10,8 @@
   "build:prod": "npm run build:eleventy:prod ",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
 }
