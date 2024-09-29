@@ -4,11 +4,10 @@
   "description": "Content for the website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
     "build": "eleventy"
   },
+  "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
+  "build:prod": "npm run build:eleventy:prod ",
   "keywords": [],
   "author": "",
   "license": "ISC"
