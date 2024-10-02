@@ -4,6 +4,7 @@
 # Misc
 /public
 /docs
+/_site
 
 # Intellij
 /.idea
