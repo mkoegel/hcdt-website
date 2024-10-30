@@ -1,0 +1,392 @@
+/*----- Styles für die Startseite beginnend mit dem Banner ------*/
+
+#banner-container {
+  background-image: url("images/MichaelBanner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  color: var(--default-green);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  #banner {
+    position: absolute;
+    top: 5rem;
+    left: 18rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 4rem;
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color:white;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+    background-color: var(--default-green);
+    padding: 1rem 2rem;
+    border: none;
+    text-decoration: none;
+    text-shadow: none;
+  }
+}
+
+
+/*----- Abschnitt "Meine Methoden" -----*/
+#methods {
+  background-color: rgb(243, 239, 245);
+  color: var(--default-green);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+
+  > div:first-child {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    font-size: 2rem;
+  }
+
+  .method {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    font-weight: 200;
+    padding: 0 3.5rem;
+    line-height: 1.8;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  #source {
+    font-size: 0.8rem;
+  }
+
+  p.quote {
+    font-weight: bold;
+    margin:0;
+  }
+
+  p.autor {
+    font-weight: 200;
+    margin: 0 0 2rem 0;
+  }
+}
+
+
+/*----- Abschnitt "Mein Angebot" -----*/
+#offer {
+  background-color: rgb(238,231,220);
+  display: flex;
+  justify-content: center;
+
+  #offer-container{
+    display: flex;
+    align-items: stretch;
+    width: 60%;
+    margin: 8rem 0;
+    }
+
+  img {
+    max-width: 600px;
+    max-height: 800px;
+    height: auto;
+  }
+
+  #offer-text {
+    background-color: white;
+    color: var(--default-green);
+    width:50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-weight: bold;
+      font-size: 3rem;
+      white-space: nowrap;
+      margin: 0;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    a {
+      font-size: 1rem;
+      color: white;
+      background-color: var(--default-green);
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border: none;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
+
+
+/*----- Abschnitt "Meine Projekte" -----*/
+#projects {
+  background-color: rgb(243, 239, 245);
+  color: var(--default-green);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    margin: 0;
+  }
+
+  #projects-container {
+    display: flex;
+    justify-content: center;
+
+    .project {
+      font-weight: 200;
+      padding: 0 4rem;
+      line-height: 1.8;
+      max-width: 30%;
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  a {
+    font-size: 1rem;
+    color: white;
+    background-color: var(--default-green);
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border: none;
+    text-decoration: none;
+  }
+}
+
+
+/*----- Abschnitt Empfehlungen-Karussell -----*/
+#recommendation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 350px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 0;
+  background-color: rgb(238,231,220);
+  color: var(--default-green);
+  font-weight: 200;
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--default-green);
+    cursor: pointer;
+  }
+
+  #prevBtn {
+    left: 50px;
+  }
+
+  #nextBtn {
+    right: 50px;
+  }
+
+  button:hover {
+    color: rgba(28, 78, 70, 0.7);
+  }
+}
+
+#carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommendation {
+  min-width: 100%;
+  display: none;
+  padding: 20px;
+}
+
+.recommendation.active {
+  display: block;
+}
+
+#carousel p {
+  width: 50%;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: var(--default-green);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.dot.active {
+  background-color: white;
+  border:  solid 2px var(--default-green);
+  box-sizing: border-box;
+}
+
+.quote-icon {
+  width: 60px;
+  height: 60px;
+  fill: var(--default-green);
+  margin-bottom: 20px;
+}
+
+/*----- Gruppenbild Südwork Team -----*/
+#group\ photo{
+  position: relative;
+  background-image: url("images/suedwork_team.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width:auto;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #overlay {
+    position: absolute;
+    top: 55%;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 450px;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color:white;
+      font-size: 1.3rem;
+      text-align: center;
+      text-decoration: none;
+      border: solid 2px white;
+      background-color: transparent;
+      width: 200px;
+      height: 40px;
+      font-weight: 200;
+      margin-top: 20px;
+      display: inline-block;
+      line-height: 40px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: white;
+        color: var(--default-green);
+      }
+    }
+  }
+}
+
+/*----- Abschnitt Kontakt -----*/
+#contact {
+  background-color: var(--default-green);
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  font-weight: 200;
+  padding: 2rem 0 4rem 0;
+}
+
+#contact-container {
+  h1 {
+    font-size: 2rem;
+  }
+
+  img {
+    margin-top: 30px;
+    padding: 0 15px 0 0;
+    width: 21px;
+    height: 21px;
+  }
+
+  a {
+    color: white;
+    line-height: 1.8;
+  }
+}
+
+#badges {
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+
+  img {
+    height: 130px;
+    padding: 0 10px;
+  }
+}
+
+

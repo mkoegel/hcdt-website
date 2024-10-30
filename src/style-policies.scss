@@ -1,0 +1,35 @@
+#impressum, #agb, #datenschutzerklärung {
+  display: flex;
+  justify-content: center;
+  color: var(--default-green);
+}
+
+#impressum-container, #agb-container, #datenschutz-container {
+  max-width: 750px;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+ul {
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 2.5rem 0 0.5rem 0;
+  letter-spacing: -1px;
+}
+
+.text {
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0;
+}
