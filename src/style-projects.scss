@@ -1,0 +1,95 @@
+/*----- Styles für die "Projekte" Seite -----*/
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--default-green);
+  color: white;
+  height: 250px;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 900px;
+    line-height: 1.8;
+  }
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--default-green);
+  max-width: 900px;
+  margin: 0 auto 5rem auto;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5rem;
+  }
+
+  p, ul {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+  }
+}
+
+
+#project1-details {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    width: 480px;
+    height: 270px;
+  }
+
+  p {
+    max-width: 450px;
+    padding: 0 0 0 30px;
+  }
+}
+
+#project2-details {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    max-width: 450px;
+    padding: 0 30px 0 0;
+  }
+}
+
+
+#project3-details {
+  display: flex;
+  flex-direction: row;
+
+  ul, p {
+    max-width: 650px;
+  }
+
+  ul {
+    padding: 15px 0 15px 25px;
+  }
+
+  img {
+    width: 230px;
+    height: 230px;
+    padding-left: 14px;
+  }
+}
+
+
