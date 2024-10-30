@@ -4,7 +4,8 @@
   "description": "Content for the website",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy",
+    "start": "eleventy --serve"
   },
   "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
   "build:prod": "npm run build:eleventy:prod ",
