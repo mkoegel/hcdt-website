@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*----- Styles für die Startseite beginnend mit dem Banner ------*/
 #banner-container {
-  background-image: url("/images/MichaelBanner.jpg");
+  background-image: url("images/MichaelBanner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
@@ -56,6 +56,10 @@
   flex-wrap: wrap;
   padding-bottom: 4rem;
 }
+#methods h1 {
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+}
 #methods > div:first-child {
   width: 100%;
   margin: 2rem 0 0 0;
@@ -69,9 +73,10 @@
   padding: 0 3.5rem;
   line-height: 1.8;
 }
-#methods .method h3 {
+#methods .method h2 {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
   white-space: nowrap;
 }
 #methods #source {
@@ -112,7 +117,8 @@
   flex-direction: column;
 }
 #offer #offer-text h1 {
-  font-weight: bold;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
   font-size: 3rem;
   white-space: nowrap;
   margin: 0;
@@ -147,6 +153,8 @@
   font-size: 3rem;
   padding-bottom: 2rem;
   margin: 0;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
 }
 #projects #projects-container {
   display: flex;
@@ -266,7 +274,7 @@
 /*----- Gruppenbild Südwork Team -----*/
 #group\ photo {
   position: relative;
-  background-image: url("/images/suedwork_team.webp");
+  background-image: url("images/suedwork_team.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -327,6 +335,8 @@
 
 #contact-container h1 {
   font-size: 2rem;
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
 }
 #contact-container img {
   margin-top: 30px;
