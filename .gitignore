@@ -3,7 +3,7 @@
 
 # Misc
 /public
-/docs
+#/docs
 /_site
 
 # Intellij
