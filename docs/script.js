@@ -79,7 +79,7 @@ function switchLanguage(loadingNewPage) {
     // Aktuelle URL und Dateiname abrufen
     let currentUrl = window.location.href;
 
-    if (!currentUrl.contains(".html")) {
+    if (!currentUrl.includes(".html")) {
         currentUrl += "index.html";
     }
 
