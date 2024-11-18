@@ -76,6 +76,8 @@ function switchLanguage(loadingNewPage) {
         selectedLang = document.getElementById("language-switch").value;
     }
 
+    localStorage.setItem("selectedLanguage", selectedLang);
+
     // Aktuelle URL und Dateiname abrufen
     let currentUrl = window.location.href;
 
