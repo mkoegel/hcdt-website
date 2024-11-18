@@ -72,7 +72,12 @@ function switchLanguage() {
     localStorage.setItem("selectedLanguage", selectedLang); // Sprache im LocalStorage speichern
 
     // Aktuelle URL und Dateiname abrufen
-    const currentUrl = window.location.href;
+    let currentUrl = window.location.href;
+
+    if (!currentUrl.contains(".html")) {
+        currentUrl += "index.html";
+    }
+
     const fileName = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
 
     // URL zur gewünschten Sprache umschalten
