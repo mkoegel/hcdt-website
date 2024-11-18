@@ -96,8 +96,10 @@ function switchLanguage(loadingNewPage) {
         newFileName = fileName.includes("_en") ? fileName.replace("_en.html", ".html") : fileName;
     }
 
-    // Seite neu laden mit der gewählten Sprache
-    window.location.href = currentUrl.replace(fileName, newFileName);
+    // Seite neu laden mit der gewählten Sprache, falls sich sprache geändert hat
+    if (newFileName !== fileName) {
+        window.location.href = currentUrl.replace(fileName, newFileName);
+    }
 }
 
 // Sprache beim Laden der Seite setzen
