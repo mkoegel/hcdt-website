@@ -66,9 +66,17 @@ dots.forEach((dot, index) => {
 
 
 /*----- Funktion zum Ändern der Sprache -----*/
+
 // Funktion zur Sprachumschaltung
-function switchLanguage() {
-    const selectedLang = document.getElementById("language-switch").value;
+function switchLanguage(loadingNewPage) {
+    let selectedLang;
+
+    if (loadingNewPage) {
+        selectedLang = localStorage.getItem("selectedLanguage") || document.getElementById("language-switch").value;
+    } else {
+        selectedLang = document.getElementById("language-switch").value;
+    }
+
     localStorage.setItem("selectedLanguage", selectedLang); // Sprache im LocalStorage speichern
 
     // Aktuelle URL und Dateiname abrufen
@@ -94,16 +102,5 @@ function switchLanguage() {
 
 // Sprache beim Laden der Seite setzen
 window.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("selectedLanguage") || "de";
-
-    // Aktuelle URL und Dateiname abrufen
-    const currentUrl = window.location.href;
-    const fileName = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
-
-    // URL zur gespeicherten Sprache umschalten, wenn sie nicht der aktuellen URL entspricht
-    if (savedLang === "en" && !fileName.includes("_en")) {
-        window.location.href = currentUrl.replace(fileName, fileName.replace(".html", "_en.html"));
-    } else if (savedLang === "de" && fileName.includes("_en")) {
-        window.location.href = currentUrl.replace(fileName, fileName.replace("_en.html", ".html"));
-    }
+    switchLanguage(true);
 });
